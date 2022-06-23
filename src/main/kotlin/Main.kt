@@ -3,14 +3,14 @@ import java.util.Scanner
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    println("Enter the directory that contains the PIR files:")
+    print("Enter the directory that contains the PIR files:\n> ")
     val inputDirectory = scanner.nextLine()
-    println("Save as .txt (enter 'y') instead of CSV (default, press 'n' or enter)?")
+    print("Save as .txt (enter 'y') instead of CSV (default, press 'n' or enter)?\n> ")
     val isSaveAsCsv: Boolean
     while (true) {
         val asCsvInput = scanner.nextLine()
         if (asCsvInput !in setOf("", "y", "n"))
-            println("Wrong input. Enter 'n' for CSV, 'y' for .txt")
+            print("Wrong input. Enter 'n' for CSV, 'y' for .txt\n> ")
         else {
             isSaveAsCsv = asCsvInput != "y"
             break
